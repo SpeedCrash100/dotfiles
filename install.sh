@@ -62,6 +62,7 @@ function execute_scripts() {
 
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+export BASE_DIR=${SCRIPT_DIR}
 
 
 OS=$(grep -E '^ID=' /etc/os-release | sed 's/ID=//g')
@@ -81,7 +82,7 @@ HINTS=( $@ "$OS" "common")
 # Prepare system
 execute_scripts ${SCRIPT_DIR}/prepare ${HINTS[@]}
 
-PM=$(cat /tmp/PM 2>/dev/null)
+export PM=$(cat /tmp/PM 2>/dev/null)
 echo "Package manager is ${PM}"
 if [ -z "$PM" ]; then 
     echo "FAIL: PM is not set by prepare scripts" 1>&2;
@@ -89,11 +90,20 @@ if [ -z "$PM" ]; then
 fi
 
 
-PYTHON=$(cat /tmp/PYTHON 2>/dev/null)
+export PYTHON=$(cat /tmp/PYTHON 2>/dev/null)
 echo "Python 3 is ${PYTHON}"
 if [ -z "$PYTHON" ]; then 
     echo "FAIL: PYTHON is not set by prepare scripts" 1>&2;
     exit 3;
 fi
+
+PACKAGES=$( ${SCRIPT_DIR}/profiles/packages.sh ${HINTS[@]} )
+if [ $? -eq 0 ]; then 
+    echo "Packages to install: $PACKAGES";
+else
+    echo "Failed to get packages" 1>&2;
+    exit 4;
+fi
+
 
 
