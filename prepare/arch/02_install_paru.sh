@@ -17,5 +17,5 @@ sudo pacman -S --noconfirm rustup bat devtools
     makepkg -si --noconfirm )
 
 
-echo "$(which paru)" > "/tmp/PM"
+echo "$(which paru) -S --noconfirm" > "/tmp/PM"
 
