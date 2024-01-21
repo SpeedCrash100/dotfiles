@@ -76,7 +76,7 @@ else
 fi
 
 # Hints is used to select corresponding script folder
-HINTS=("$OS" "common")
+HINTS=( $@ "$OS" "common")
 
 # Prepare system
 execute_scripts ${SCRIPT_DIR}/prepare ${HINTS[@]}
