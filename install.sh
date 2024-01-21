@@ -105,5 +105,8 @@ else
     exit 4;
 fi
 
-
+for PKG in ${PACKAGES[@]}; do 
+    PKG_PATH="${SCRIPT_DIR}/packages/${PKG}/wrapper.sh"
+    eval "${PKG_PATH}" "${HINTS[@]}"
+done
 
