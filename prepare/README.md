@@ -11,3 +11,4 @@ After the following files must be created:
 | Name          | Description                                                  |
 |---------------|--------------------------------------------------------------|
 | /tmp/PM       | A package manager to use to install packages                 |
+| /tmp/PYTHON   | A python 3 executable to use                                 |

@@ -88,3 +88,12 @@ if [ -z "$PM" ]; then
     exit 2;
 fi
 
+
+PYTHON=$(cat /tmp/PYTHON 2>/dev/null)
+echo "Python 3 is ${PYTHON}"
+if [ -z "$PYTHON" ]; then 
+    echo "FAIL: PYTHON is not set by prepare scripts" 1>&2;
+    exit 3;
+fi
+
+
