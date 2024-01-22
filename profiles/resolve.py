@@ -6,7 +6,7 @@ import sys
 import os
 import subprocess
 
-base_path=os.getenv("BASE_PATH")
+base_path=os.getenv("BASE_DIR")
 packages_dir = base_path + "/packages"
 
 input_str = sys.stdin.read()
