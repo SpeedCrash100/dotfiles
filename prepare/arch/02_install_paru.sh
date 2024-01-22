@@ -11,6 +11,8 @@ WORKDIR=$( mktemp -d )
 echo "pacman -S --noconfirm rustup bat devtools"
 sudo pacman -S --noconfirm rustup bat devtools
 
+rustup default stable
+
 (   \
     cd "${WORKDIR}" && \
     git clone "https://aur.archlinux.org/paru.git" . && \
