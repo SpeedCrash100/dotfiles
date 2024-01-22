@@ -97,7 +97,7 @@ if [ -z "$PYTHON" ]; then
     exit 3;
 fi
 
-PACKAGES=$( ${SCRIPT_DIR}/profiles/packages.sh ${HINTS[@]} )
+export PACKAGES=$( ${SCRIPT_DIR}/profiles/packages.sh ${HINTS[@]} )
 if [ $? -eq 0 ]; then 
     echo "Packages to install: $PACKAGES";
 else
