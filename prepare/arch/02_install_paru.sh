@@ -8,14 +8,12 @@ fi
 
 WORKDIR=$( mktemp -d )
 
-echo "pacman -S --noconfirm rustup bat devtools"
-sudo pacman -S --noconfirm rustup bat devtools
-
-rustup default stable
+echo "pacman -S --noconfirm bat devtools"
+sudo pacman -S --noconfirm bat devtools
 
 (   \
     cd "${WORKDIR}" && \
-    git clone "https://aur.archlinux.org/paru.git" . && \
+    git clone "https://aur.archlinux.org/paru-bin.git" . && \
     makepkg -si --noconfirm )
 
 
