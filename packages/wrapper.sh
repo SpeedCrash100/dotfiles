@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 export PACKAGE_NAME=$(basename ${SCRIPT_DIR})
+export PACKAGE_DIR="${BASE_DIR}/packages/${PACKAGE_NAME}"
 
 HINTS=()
 
