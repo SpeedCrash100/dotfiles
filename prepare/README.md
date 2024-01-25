@@ -5,7 +5,7 @@ prepare package managers(install AUR helper in case of Arch) and much more
 ## Requirements
 
 ### Outputs
-After the following files must be created:
+The following files must be created after preparing:
 
 
 | Name          | Description                                                  |
