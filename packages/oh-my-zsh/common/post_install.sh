@@ -7,4 +7,4 @@ echo "$(cat ${BASE_DIR}/packages/${PACKAGE_NAME}/common/.zshrc_add)" >> "$HOME/.
 mkdir -p "$HOME/.oh-my-zsh/custom/hooks/pre-oh-my-zsh.d"
 # Hooks to run after oh-my-zsh initialized
 #
-mkdir -p "$HOME/.oh-my-zsh/custom/hooks/late-oh-my-zsh.d"
+mkdir -p "$HOME/.oh-my-zsh/custom/hooks/post-oh-my-zsh.d"
