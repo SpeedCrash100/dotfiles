@@ -33,18 +33,18 @@ function install_from_dir() {
     shift 1
 
     PREINSTALL_SCRIPT="${SCRIPT_DIR}/${SUBDIR}/pre_install.sh"
-    if [ -f "${PREINSTALL_SCRIPT}" ]; then 
+    if [ -x "${PREINSTALL_SCRIPT}" ]; then 
         "${PREINSTALL_SCRIPT}" ${HINTS[@]}
     fi
 
     SYSTEM_PKGS="${SCRIPT_DIR}/${SUBDIR}/system.txt"
-    if [ -f "${SYSTEM_PKGS}" ]; then 
+    if [ -r "${SYSTEM_PKGS}" ]; then 
         echo "${PM}" $(cat "${SYSTEM_PKGS}")
         eval "${PM}" $(cat "${SYSTEM_PKGS}")
     fi
     
     POSTINSTALL_SCRIPT="${SCRIPT_DIR}/${SUBDIR}/post_install.sh"
-    if [ -f "${POSTINSTALL_SCRIPT}" ]; then 
+    if [ -x "${POSTINSTALL_SCRIPT}" ]; then 
         "${POSTINSTALL_SCRIPT}" ${HINTS[@]}
     fi
 }
