@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # space separated list of deps
-PACKAGE_DEPS="nerd-fonts rust cpp-tools"
+PACKAGE_DEPS="nerd-fonts rust cpp-tools oh-my-zsh"
 
 
 # Leave this as is
