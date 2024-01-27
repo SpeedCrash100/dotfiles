@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # space separated list of deps
-PACKAGE_DEPS=" "
+PACKAGE_DEPS="local-profile "
 
 
 # Leave this as is
