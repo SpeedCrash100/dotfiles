@@ -1,1 +1,2 @@
 ttf-firacode-nerd
+otf-font-awesome
