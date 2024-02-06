@@ -1,0 +1,11 @@
+
+# notify
+exec dunst
+
+# Auth agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+
+# clipboard
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store

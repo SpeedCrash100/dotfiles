@@ -1,0 +1,99 @@
+* {
+	border: none;
+    border-radius: 10;
+	font-size: 15px;
+	min-height: 10px;
+}
+
+
+window#waybar {
+    background-color: transparent;
+    padding: 10px;
+    color: white
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+.modules-center {
+    background: #383c4a;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#custom-launcher {
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 10px;
+    background-color: #383c4a;
+    color: #0095a0;
+}
+
+#workspaces {
+    transition: none;
+    background-color: #383c4a;
+}
+
+#workspaces button {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: transparent;
+    color: gray;
+}
+
+
+#workspaces button.focused {
+    background-color: transparent;
+    color: white;
+}
+
+#workspaces button:hover {
+    background: lightgray;
+    color: red;
+}
+
+#scratchpad {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #383c4a;
+}
+
+#mode {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: red;
+}
+
+#pulseaudio {
+    padding: 0px 10px;
+    background-color: #383c4a;
+}
+
+#network {
+    padding-left: 10px;
+    padding-right: 15px;
+    background-color: #383c4a;
+}
+
+#language {
+    padding: 0px 10px;
+    background-color: #383c4a;
+}
+
+#battery {
+    padding-left: 10px;
+    padding-right: 20px;
+    background-color: #383c4a;
+}
+
+#tray {
+    padding: 0px 10px;
+    background-color: blue;
+}
+
+
+

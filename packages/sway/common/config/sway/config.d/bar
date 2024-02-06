@@ -1,0 +1,5 @@
+
+
+exec waybar
+
+#exec . ~/.local/etc/profile && ~/.cargo/bin/eww --restart daemon &&  ~/.cargo/bin/eww --restart open bar 

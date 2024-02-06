@@ -1,0 +1,19 @@
+# Apps shortcuts and variables
+
+set $term wezterm
+set $menu rofi -show drun | xargs swaymsg exec --
+set $web org.mozilla.firefox
+set $fm nautilus
+
+
+# Start a terminal
+bindsym $mod+t exec $term
+
+# Start your launcher
+bindsym $mod+r exec $menu
+
+# Start web browse
+bindsym $mod+w exec $web
+
+# Start file manager
+bindsym $mod+e exec $fm

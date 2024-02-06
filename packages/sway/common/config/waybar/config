@@ -1,0 +1,75 @@
+{
+    "layer": "top", 
+    "position": "top", 
+    "height": 20, 
+    "spacing": 10, 
+    "margin-bottom": 4,
+    "margin-top": 4,
+    "modules-left": ["custom/launcher", "sway/workspaces", "sway/scratchpad", "sway/mode"],
+    "modules-center": ["clock", "idle_inhibitor"],
+    "modules-right": [ "pulseaudio", "network", "sway/language", "battery", "tray"],
+    
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi"
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>",
+        "on-click": "swaymsg 'mode default'"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "battery": {
+        "states": {
+            "good": 90,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format-icons": {
+			"default": ["", "", ""]
+		},
+        "format": "{icon} {volume}%",
+		"format-muted": "{icon} {volume}%",
+        "on-click": "pavucontrol"
+    }
+    
+}
+
