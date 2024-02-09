@@ -32,6 +32,8 @@ function install_from_dir() {
     SUBDIR=$1
     shift 1
 
+    set -e
+
     PREINSTALL_SCRIPT="${SCRIPT_DIR}/${SUBDIR}/pre_install.sh"
     if [ -x "${PREINSTALL_SCRIPT}" ]; then 
         "${PREINSTALL_SCRIPT}" ${HINTS[@]}
@@ -47,6 +49,8 @@ function install_from_dir() {
     if [ -x "${POSTINSTALL_SCRIPT}" ]; then 
         "${POSTINSTALL_SCRIPT}" ${HINTS[@]}
     fi
+
+    set +e
 }
 
 for HINT in ${HINTS[@]}; do

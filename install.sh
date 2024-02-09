@@ -108,5 +108,10 @@ fi
 for PKG in ${PACKAGES[@]}; do 
     PKG_PATH="${SCRIPT_DIR}/packages/${PKG}/wrapper.sh"
     eval "${PKG_PATH}" "${HINTS[@]}"
+    PKG_RETURN_VALUE=$?
+    if [ $PKG_RETURN_VALUE -ne 0 ]; then
+        echo "Package ${PKG} failed to install with code: ${PKG_RETURN_VALUE}"
+        exit $PKG_RETURN_VALUE
+    fi
 done
 
