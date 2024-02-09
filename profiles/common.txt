@@ -4,3 +4,4 @@ zsh-syntax-highlighting
 rust
 starship
 local-python
+locale-ru
