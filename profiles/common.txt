@@ -5,3 +5,4 @@ rust
 starship
 local-python
 locale-ru
+zoxide
