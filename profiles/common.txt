@@ -7,3 +7,4 @@ local-python
 locale-ru
 zoxide
 navi
+rust-utils
