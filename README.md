@@ -5,6 +5,7 @@ Configurations, app installation for rapid reinstalls :D
   * .dotter - dotter files for deployment
   * prepare - scripts for preparing the host system
   * packages - installable packages when selected by dotter
+  * config - config location
   * deploy.sh - entrypoint for config deploy
 
 # Docker test image

@@ -3,12 +3,13 @@
 #
 # Creates ~/.local/etc/profile script that sources *.sh files at `~/.local/etc/profile.d/` allowing to modify env, PATH, etc.
 [local-profile.files]
-local_profile = "~/.local/etc/profile"
+"config/.local/etc/profile" = "~/.local/etc/profile"
+"config/.profile" = "~/.profile"
 
 [zsh]
 depends = []
 [zsh.files]
-zshrc = "~/.zshrc"
+"config/.zshrc" = "~/.zshrc"
 
 [zsh-autosuggestions]
 depends = ["zsh"]
@@ -36,4 +37,5 @@ depends = [
     "zsh-syntax-highlighting",
     "zoxide",
     "starship",
+    "local-profile",
 ]

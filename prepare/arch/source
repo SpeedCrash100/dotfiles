@@ -1,4 +1,4 @@
 
 PM="paru -S --noconfirm --needed"
-PYTHON=python3
-CARGO=cargo
+PYTHON="$(which python3)"
+CARGO="$(which cargo)"

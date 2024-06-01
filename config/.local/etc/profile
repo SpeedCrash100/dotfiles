@@ -1,0 +1,26 @@
+# Append "$1" to $PATH when not already in.
+# This function API is accessible to scripts in /etc/profile.d
+append_path () {
+    case ":$PATH:" in
+        *:"$1":*)
+            ;;
+        *)
+            PATH="${PATH:+$PATH:}$1"
+    esac
+}
+
+prepend_path () {
+    case ":$PATH:" in
+        *:"$1":*)
+            ;;
+        *)
+            PATH="$1${PATH:+:$PATH}"
+    esac
+}
+
+if test -d "$HOME/.local/etc/profile.d"; then
+    for profile in $(find "$HOME/.local/etc/profile.d" -name "*.sh" | sort); do
+        test -r "$profile" && . "$profile"
+    done
+    unset profile
+fi

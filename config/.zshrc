@@ -1,8 +1,8 @@
 
 {{#if dotter.packages.local-profile }}
 # Profile
-if [ -f "$HOME/.local/etc/profile" ]; then
-    . "$HOME/.local/etc/profile"
+if [ -f "$HOME/.profile" ]; then
+    . "$HOME/.profile"
 fi
 {{/if}}
 
