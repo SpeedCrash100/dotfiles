@@ -11,5 +11,6 @@ There are 2 required files in the folder:
 
  - `PM` - Package manager command, ex `paru -Syu`
  - `PYTHON` - Python 3 command to use
+ - `CARGO` - cargo executable for install packages
 
 

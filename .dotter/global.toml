@@ -1,0 +1,8 @@
+
+[zsh]
+
+[cargo]
+depends = []
+
+[sccache]
+depends = ["cargo"]

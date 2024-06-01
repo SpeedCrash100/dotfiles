@@ -49,3 +49,8 @@ OS=$(grep -E '^ID=' /etc/os-release | sed 's/ID=//g')
 echo "Detected system: '${OS}'"
 
 run_prepare "${BASE_DIR}/prepare/${OS}"
+
+export OS
+export PM
+export PYTHON
+export CARGO

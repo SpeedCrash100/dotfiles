@@ -1,7 +1,6 @@
 # Dotfiles
 Configurations, app installation for rapid reinstalls :D
 
-
 # Docker test image
 
 Build command
