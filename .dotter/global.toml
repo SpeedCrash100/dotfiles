@@ -27,3 +27,13 @@ depends = ["cargo"]
 
 [starship]
 depends = ["cargo"]
+
+# Virtual package for shell
+[shell]
+depends = [
+    "zsh",
+    "zsh-autosuggestions",
+    "zsh-syntax-highlighting",
+    "zoxide",
+    "starship",
+]
