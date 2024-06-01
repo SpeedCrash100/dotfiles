@@ -1,6 +1,12 @@
 # Dotfiles
 Configurations, app installation for rapid reinstalls :D
 
+# Repository structure
+  * .dotter - dotter files for deployment
+  * prepare - scripts for preparing the host system
+  * packages - installable packages when selected by dotter
+  * deploy.sh - entrypoint for config deploy
+
 # Docker test image
 
 Build command
