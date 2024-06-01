@@ -1,5 +1,5 @@
 
-if command -v git &> /dev/null; then
+if command -v sccache &> /dev/null; then
     echo "sccache have installed already"
     exit 0
 fi

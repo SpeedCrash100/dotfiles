@@ -1,8 +1,29 @@
 
+# local-profile 
+#
+# Creates ~/.local/etc/profile script that sources *.sh files at `~/.local/etc/profile.d/` allowing to modify env, PATH, etc.
+[local-profile.files]
+local_profile = "~/.local/etc/profile"
+
 [zsh]
+depends = []
+[zsh.files]
+zshrc = "~/.zshrc"
+
+[zsh-autosuggestions]
+depends = ["zsh"]
+
+[zsh-syntax-highlighting]
+depends = ["zsh"]
 
 [cargo]
 depends = []
 
 [sccache]
+depends = ["cargo"]
+
+[zoxide]
+depends = ["cargo"]
+
+[starship]
 depends = ["cargo"]
