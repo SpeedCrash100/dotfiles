@@ -1,0 +1,19 @@
+
+
+if command -v paru &> /dev/null; then
+    echo "paru have installed already"
+    exit 0
+fi
+
+echo "Installing Paru"
+
+WORKDIR=$( mktemp -d )
+
+echo "pacman -S --noconfirm bat devtools"
+sudo pacman -S --noconfirm bat devtools
+
+
+(   \
+    cd "${WORKDIR}" && \
+    git clone "https://aur.archlinux.org/paru.git" . && \
+    makepkg -si --noconfirm )

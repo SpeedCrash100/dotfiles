@@ -1,0 +1,5 @@
+
+echo "Installing base for Arch"
+
+echo "pacman -S --noconfirm --needed base-devel curl which openssl"
+sudo pacman -S --noconfirm --needed base-devel curl which openssl

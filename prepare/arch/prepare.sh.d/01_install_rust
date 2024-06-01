@@ -1,0 +1,7 @@
+
+echo "Install rust"
+
+echo "pacman -S --noconfirm --needed rustup"
+sudo pacman -S --noconfirm --needed rustup
+
+rustup default stable

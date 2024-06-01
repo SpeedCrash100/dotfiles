@@ -1,0 +1,10 @@
+
+if command -v git &> /dev/null; then
+    echo "git have installed already"
+    exit 0
+fi
+
+echo "Installing git"
+
+echo "pacman -S --noconfirm git"
+sudo pacman -S --noconfirm git

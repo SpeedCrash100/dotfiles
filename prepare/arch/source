@@ -1,0 +1,3 @@
+
+PM="paru -S --noconfirm --needed"
+PYTHON="python3"

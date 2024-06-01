@@ -1,0 +1,10 @@
+
+if command -v python3 &> /dev/null; then
+    echo "python3 have installed already"
+    exit 0
+fi
+
+echo "Installing python"
+
+echo "pacman -S --noconfirm python"
+sudo pacman -S --noconfirm python
