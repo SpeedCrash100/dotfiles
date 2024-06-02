@@ -1,0 +1,2 @@
+
+$PM noto-fonts-cjk

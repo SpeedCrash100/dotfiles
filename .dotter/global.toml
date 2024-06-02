@@ -59,6 +59,9 @@ depends = ["cargo"]
 [nerd-fonts]
 depends = []
 
+[cjk-fonts]
+depends = []
+
 # Hardware specific
 # Defines env for ROCm
 [amd-rx6700xt-rocm]
