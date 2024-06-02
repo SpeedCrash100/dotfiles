@@ -36,6 +36,17 @@ depends = ["cargo", "nerd-fonts"]
 [bat]
 depends = ["cargo"]
 
+[git.files]
+"config/.gitconfig" = "~/.gitconfig"
+
+[git.variables]
+# Optional vars:
+# email - email address
+# git_name - user name used for git
+# git_signingkey - path to key to sign
+git_editor = "core --wait"
+
+
 # Fonts
 [nerd-fonts]
 depends = []

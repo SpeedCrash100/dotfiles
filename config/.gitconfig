@@ -1,0 +1,22 @@
+[user]
+    {{#if email}}
+    email = {{email}}
+    {{/if}}
+    {{#if git_name}}
+    name = {{git_name}}
+    {{/if}}
+    {{#if git_signingkey}}
+    signingkey = {{git_signingkey}}
+    {{/if}}
+[gpg]
+    {{#if git_signingkey}}
+    format = ssh
+    {{/if}}
+[commit]
+    {{#if git_signingkey}}
+    gpgsign = true
+    {{/if}}
+[init]
+    defaultBranch = main
+[core]
+    editor = {{git_editor}}
