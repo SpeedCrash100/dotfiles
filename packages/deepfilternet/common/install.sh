@@ -8,6 +8,7 @@ WORK_DIR=$(mktemp -d)
 
 (   cd "${WORK_DIR}" \
     && git clone https://github.com/Rikorose/DeepFilterNet.git . \
+    && $CARGO build --release -p deep-filter-ladspa \
     && install -D "${WORK_DIR}/target/release/libdeep_filter_ladspa.so" \
         "${HOME}/.local/lib/ladspa/libdeep_filter_ladspa.so" 
 
