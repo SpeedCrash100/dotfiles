@@ -43,7 +43,7 @@ depends = ["cargo"]
 # Optional vars:
 # email - email address
 # git_name - user name used for git
-# git_signingkey - path to key to sign
+# git_signingkey - path to ssh key to sign
 git_editor = "core --wait"
 
 [dust]
@@ -63,6 +63,10 @@ depends = ["local-profile"]
 
 [user-python.files]
 "config/.local/etc/profile.d/user-python.sh" = "~/.local/etc/profile.d/user-python.sh"
+
+[deepfilternet.files]
+"config/.config/pipewire/filter-chain.conf" = "~/.config/pipewire/filter-chain.conf"
+"config/.config/pipewire/filter-chain.conf.d/deepfilternet.conf" = "~/.config/pipewire/filter-chain.conf.d/deepfilternet.conf"
 
 
 # Fonts
