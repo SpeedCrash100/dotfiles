@@ -25,7 +25,16 @@ depends = ["local-profile"]
 "config/.cargo/config.toml" = "~/.cargo/config.toml"
 
 [sccache]
-depends = ["cargo"]
+depends = ["cargo", "local-profile"]
+
+[sccache.files]
+"config/.local/etc/profile.d/ccache.sh" = "~/.local/etc/profile.d/ccache.sh"
+
+# Override ccache
+[sccache.files."config/.local/bin/ccache"]
+type = "symbolic"
+target = "~/.local/bin/ccache"
+if = "dotter.packages.ccache"
 
 [zoxide]
 depends = ["cargo"]

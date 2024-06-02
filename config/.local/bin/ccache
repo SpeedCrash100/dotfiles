@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+which sccache >/dev/null
+if [ "$?" = "0" ]; then
+    exec sccache $@
+fi
+
+exec ccache $@
