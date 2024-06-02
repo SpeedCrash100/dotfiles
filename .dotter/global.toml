@@ -49,6 +49,9 @@ git_editor = "core --wait"
 [dust]
 depends = ["cargo"]
 
+[hyperfine]
+depends = ["cargo"]
+
 # Fonts
 [nerd-fonts]
 depends = []
@@ -74,4 +77,4 @@ depends = [
 
 
 [rust-utils]
-depends = ["bat"]
+depends = ["bat", "dust", "hyperfine"]
