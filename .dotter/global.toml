@@ -31,7 +31,7 @@ depends = ["cargo"]
 depends = ["cargo"]
 
 [starship]
-depends = ["cargo", "nerd-fonts"]
+depends = ["cargo", "nerd-fonts", "cpp-tools"]
 
 [bat]
 depends = ["cargo"]
@@ -67,6 +67,8 @@ depends = ["local-profile"]
 [deepfilternet.files]
 "config/.config/pipewire/filter-chain.conf" = "~/.config/pipewire/filter-chain.conf"
 "config/.config/pipewire/filter-chain.conf.d/deepfilternet.conf" = "~/.config/pipewire/filter-chain.conf.d/deepfilternet.conf"
+
+[cpp-tools]
 
 
 # Fonts
