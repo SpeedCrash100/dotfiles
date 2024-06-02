@@ -7,7 +7,7 @@
 "config/.profile" = "~/.profile"
 
 [zsh]
-depends = []
+depends = ["nerd-fonts"]
 [zsh.files]
 "config/.zshrc" = "~/.zshrc"
 
@@ -30,7 +30,11 @@ depends = ["cargo"]
 depends = ["cargo"]
 
 [starship]
-depends = ["cargo"]
+depends = ["cargo", "nerd-fonts"]
+
+# Fonts
+[nerd-fonts]
+depends = []
 
 # Virtual package for shell
 [shell]
