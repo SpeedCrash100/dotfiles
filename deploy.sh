@@ -54,3 +54,7 @@ export OS
 export PM
 export PYTHON
 export CARGO
+
+CARGO_BIN_LOC="${CARGO_HOME:-${HOME}/.cargo}/bin"
+
+$CARGO_BIN_LOC/dotter deploy
