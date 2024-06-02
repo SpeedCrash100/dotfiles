@@ -46,6 +46,8 @@ depends = ["cargo"]
 # git_signingkey - path to key to sign
 git_editor = "core --wait"
 
+[dust]
+depends = ["cargo"]
 
 # Fonts
 [nerd-fonts]
