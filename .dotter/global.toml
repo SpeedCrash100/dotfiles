@@ -18,7 +18,10 @@ depends = ["zsh"]
 depends = ["zsh"]
 
 [cargo]
-depends = []
+depends = ["local-profile"]
+
+[cargo.files]
+"config/.local/etc/profile.d/cargo.sh" = "~/.local/etc/profile.d/cargo.sh"
 
 [sccache]
 depends = ["cargo"]
