@@ -24,3 +24,7 @@ if test -d "$HOME/.local/etc/profile.d"; then
     done
     unset profile
 fi
+
+if test -d "$HOME/.local/bin/"; then
+    prepend_path "$HOME/.local/bin/"
+fi 
