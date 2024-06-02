@@ -70,6 +70,12 @@ depends = ["local-profile"]
 
 [cpp-tools]
 
+[ccache]
+depends = ["cpp-tools"]
+
+[ccache.files]
+"config/.ccache/ccache.conf" = "~/.ccache/ccache.conf"
+
 
 # Fonts
 [nerd-fonts]
