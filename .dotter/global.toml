@@ -55,6 +55,9 @@ depends = ["cargo"]
 [navi]
 depends = ["cargo"]
 
+[spell-check]
+depends = []
+
 # Fonts
 [nerd-fonts]
 depends = []
@@ -80,6 +83,9 @@ depends = [
     "starship",
     "local-profile",
 ]
+
+[essential]
+depends = ["shell", "cjk-fonts", "rust-utils", "spell-check", "git"]
 
 
 [rust-utils]
