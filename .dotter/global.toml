@@ -52,6 +52,9 @@ depends = ["cargo"]
 [hyperfine]
 depends = ["cargo"]
 
+[navi]
+depends = ["cargo"]
+
 # Fonts
 [nerd-fonts]
 depends = []
@@ -77,4 +80,4 @@ depends = [
 
 
 [rust-utils]
-depends = ["bat", "dust", "hyperfine"]
+depends = ["bat", "dust", "hyperfine", "navi"]
