@@ -123,6 +123,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+{{#if dotter.packages.bat}}
+which bat >/dev/null
+if [ "$?" = "0" ]; then
+    alias cat=bat
+fi
+{{/if}}
+
 
 {{#if dotter.packages.zoxide}}
 which zoxide >/dev/null

@@ -33,6 +33,9 @@ depends = ["cargo"]
 [starship]
 depends = ["cargo", "nerd-fonts"]
 
+[bat]
+depends = ["cargo"]
+
 # Fonts
 [nerd-fonts]
 depends = []
@@ -55,3 +58,7 @@ depends = [
     "starship",
     "local-profile",
 ]
+
+
+[rust-utils]
+depends = ["bat"]
