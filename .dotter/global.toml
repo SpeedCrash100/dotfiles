@@ -37,6 +37,14 @@ depends = ["cargo", "nerd-fonts"]
 [nerd-fonts]
 depends = []
 
+# Hardware specific
+# Defines env for ROCm
+[amd-rx6700xt-rocm]
+depends = ["local-profile"]
+
+[amd-rx6700xt-rocm.files]
+"config/.local/etc/profile.d/amd-rx6700xt-rocm.sh" = "~/.local/etc/profile.d/amd-rx6700xt-rocm.sh"
+
 # Virtual package for shell
 [shell]
 depends = [
