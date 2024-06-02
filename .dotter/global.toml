@@ -58,6 +58,13 @@ depends = ["cargo"]
 [spell-check]
 depends = []
 
+[user-python]
+depends = ["local-profile"]
+
+[user-python.files]
+"config/.local/etc/profile.d/user-python.sh" = "~/.local/etc/profile.d/user-python.sh"
+
+
 # Fonts
 [nerd-fonts]
 depends = []
@@ -85,7 +92,14 @@ depends = [
 ]
 
 [essential]
-depends = ["shell", "cjk-fonts", "rust-utils", "spell-check", "git"]
+depends = [
+    "shell",
+    "cjk-fonts",
+    "rust-utils",
+    "spell-check",
+    "git",
+    "user-python",
+]
 
 
 [rust-utils]
