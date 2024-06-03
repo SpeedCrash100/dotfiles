@@ -1,0 +1,15 @@
+# Systemd unit to mount the partition using udisksctl
+
+[Unit]
+Description=Mount the partition by label %I
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/udisksctl mount -b /dev/disk/by-label/%i
+ExecStop=/usr/bin/udisksctl unmount -b /dev/disk/by-label/%i
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target

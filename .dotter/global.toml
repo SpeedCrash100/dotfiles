@@ -85,6 +85,10 @@ depends = ["cpp-tools"]
 [ccache.files]
 "config/.ccache/ccache.conf" = "~/.ccache/ccache.conf"
 
+# Systemd unit to mount disks
+[systemd.files."config/.config/systemd/user/mount-by-label@.service"]
+type = "symbolic"
+target = "~/.config/systemd/user/mount-by-label@.service"
 
 # Fonts
 [nerd-fonts]
