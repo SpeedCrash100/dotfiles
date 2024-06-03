@@ -1,0 +1,12 @@
+[Unit]
+Description=Adding %i to ssh-agent
+Requires=ssh-agent.service
+
+
+[Service]
+Type=oneshot
+ExecStart=ssh-add -q %h/.ssh/%i
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

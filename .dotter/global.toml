@@ -90,6 +90,11 @@ depends = ["cpp-tools"]
 type = "symbolic"
 target = "~/.config/systemd/user/mount-by-label@.service"
 
+# Systemd unit to add ssh keys to ssh-agent
+[systemd.files."config/.config/systemd/user/ssh-add@.service"]
+type = "symbolic"
+target = "~/.config/systemd/user/ssh-add@.service"
+
 # Fonts
 [nerd-fonts]
 depends = []
