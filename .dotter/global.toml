@@ -91,9 +91,14 @@ type = "symbolic"
 target = "~/.config/systemd/user/mount-by-label@.service"
 
 # Systemd unit to add ssh keys to ssh-agent
-[systemd.files."config/.config/systemd/user/ssh-add@.service"]
-type = "symbolic"
-target = "~/.config/systemd/user/ssh-add@.service"
+[systemd.files]
+"config/.config/systemd/user/ssh-add@.service" = "~/.config/systemd/user/ssh-add@.service"
+
+[kde-ssh]
+depends = ["local-profile"]
+
+[kde-ssh.files]
+"config/.local/etc/profile.d/kde-ssh.sh" = "~/.local/etc/profile.d/kde-ssh.sh"
 
 [gamemode.files]
 "config/.config/gamemode.ini" = "~/.config/gamemode.ini"

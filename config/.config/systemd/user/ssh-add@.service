@@ -5,8 +5,15 @@ Requires=ssh-agent.service
 
 [Service]
 Type=oneshot
-ExecStart=ssh-add -q %h/.ssh/%i
+ExecStart=ssh-add %h/.ssh/%i
 RemainAfterExit=yes
+Restart=on-failure
+RestartSec=60s
+{{#if dotter.packages.kde-ssh }}
+Environment="SSH_ASKPASS=/usr/bin/ksshaskpass"
+Environment="SSH_ASKPASS_REQUIRE=prefer"
+{{/if}}
+Environment="SSH_AUTH_SOCK=%t/ssh-agent.socket"
 
 [Install]
 WantedBy=default.target
