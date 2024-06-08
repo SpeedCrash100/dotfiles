@@ -1,0 +1,59 @@
+{
+    "models": [
+        {
+            "title": "Codestral 22b",
+            "provider": "ollama",
+            "model": "codestral:22b",
+            "requestOptions": {
+                "extraBodyProperties": {
+                    "keep_alive": "0m"
+                }
+            }
+        },
+        {
+            "title": "granite-code 20b",
+            "provider": "ollama",
+            "model": "granite-code:20b",
+            "requestOptions": {
+                "extraBodyProperties": {
+                    "keep_alive": "0m"
+                }
+            }
+        },
+        {
+            "title": "granite-code 8b",
+            "provider": "ollama",
+            "model": "granite-code:8b-instruct-q5_K_M"
+        },
+        {
+            "title": "Qwen2 7b",
+            "provider": "ollama",
+            "model": "qwen2:7b-instruct-q5_K_M"
+        },
+        {
+            "title": "Codegemma 7b",
+            "provider": "ollama",
+            "model": "codegemma:7b-instruct-q5_K_M"
+        }
+    ],
+    "customCommands": [
+        {
+            "name": "test",
+            "prompt": "{{{ input }}}\n\nWrite a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
+            "description": "Write unit tests for highlighted code"
+        }
+    ],
+    "tabAutocompleteModel": {
+        "title": "Ollama Auto Complete",
+        "provider": "ollama",
+        "model": "granite-code:8b-base-q5_K_M"
+    },
+    "tabAutocompleteOptions": {
+        "template": "<fim_prefix>{{{prefix}}}<fim_suffix>{{{suffix}}}<fim_middle>"
+    },
+    "allowAnonymousTelemetry": false,
+    "embeddingsProvider": {
+        "provider": "ollama",
+        "model": "nomic-embed-text"
+    }
+}
