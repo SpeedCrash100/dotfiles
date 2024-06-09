@@ -103,6 +103,9 @@ depends = ["local-profile"]
 [gamemode.files]
 "config/.config/gamemode.ini" = "~/.config/gamemode.ini"
 
+[mangohud.files]
+"config/.config/MangoHud/MangoHud.conf" = "~/.config/MangoHud/MangoHud.conf"
+
 # Fonts
 [nerd-fonts]
 depends = []
