@@ -100,11 +100,15 @@ depends = ["local-profile"]
 [kde-ssh.files]
 "config/.local/etc/profile.d/kde-ssh.sh" = "~/.local/etc/profile.d/kde-ssh.sh"
 
+[flatpak]
+depends = []
+
 [gamemode.files]
 "config/.config/gamemode.ini" = "~/.config/gamemode.ini"
 
 [mangohud.files]
 "config/.config/MangoHud/MangoHud.conf" = "~/.config/MangoHud/MangoHud.conf"
+"packages/mangohud/common/post_deploy.tmpl.sh" = "packages/mangohud/common/post_deploy.generated.sh"
 
 [gamescope]
 depends = []
