@@ -22,14 +22,11 @@ function install_package() {
 
     echo "${PACKAGE_NAME}"
 
-
-    if [ -r "${PACKAGE_DIR}/${OS}/install.sh" ]; then 
-        bash "${PACKAGE_DIR}/${OS}/install.sh"
-    elif [ -r "${PACKAGE_DIR}/common/install.sh" ]; then 
-        bash "${PACKAGE_DIR}/common/install.sh"
-    else 
-        echo "--> No install.sh found for ${PACKAGE_NAME} for ${OS}. Skipping"
-    fi
+    for subdir in ${OS} common; do
+        if [ -r "${PACKAGE_DIR}/${subdir}/install.sh" ]; then
+            bash "${PACKAGE_DIR}/${subdir}/install.sh";
+        fi
+    done
 
     echo ""
 }

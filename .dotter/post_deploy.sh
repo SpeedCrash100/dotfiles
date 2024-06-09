@@ -38,14 +38,9 @@ function post_deploy_package() {
 
     echo "${PACKAGE_NAME}"
 
-
-    if [ -d "${PACKAGE_DIR}/${OS}" ]; then 
-        run_post_deploy_from_dir "${PACKAGE_DIR}/${OS}"
-    elif [ -d "${PACKAGE_DIR}/common" ]; then 
-        run_post_deploy_from_dir "${PACKAGE_DIR}/common"
-    else 
-        echo "--> No folders found for ${PACKAGE_NAME} for ${OS} to do post_install. Skipping"
-    fi
+    for subdir in ${OS} common; do 
+        run_post_deploy_from_dir "${PACKAGE_DIR}/${subdir}"
+    done
 
     echo ""
 } 
