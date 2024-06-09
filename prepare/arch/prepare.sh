@@ -3,6 +3,7 @@
 # Set the directory containing the scripts
 ADDITIONAL_SCRIPT_DIR="${BASE_DIR}/prepare/arch/prepare.sh.d"
 
+set -e
 
 # Check if directory exists
 if [ -d "$ADDITIONAL_SCRIPT_DIR" ]; then
@@ -16,3 +17,5 @@ else
     echo "Directory $ADDITIONAL_SCRIPT_DIR does not exist."
     exit -1
 fi
+
+set +e
