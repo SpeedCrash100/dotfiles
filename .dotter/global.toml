@@ -53,7 +53,7 @@ depends = ["cargo"]
 # email - email address
 # git_name - user name used for git
 # git_signingkey - path to ssh key to sign
-git_editor = "core --wait"
+git_editor = "code --wait"
 
 [dust]
 depends = ["cargo"]
