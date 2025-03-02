@@ -64,6 +64,9 @@ depends = ["cargo"]
 [navi]
 depends = ["cargo"]
 
+[fd-find]
+depends = ["cargo"]
+
 [spell-check]
 depends = []
 
@@ -157,4 +160,4 @@ depends = ["gamemode", "mangohud", "gamescope"]
 
 
 [rust-utils]
-depends = ["bat", "dust", "hyperfine", "navi"]
+depends = ["bat", "dust", "hyperfine", "navi", "fd-find"]

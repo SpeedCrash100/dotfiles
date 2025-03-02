@@ -1,2 +1,2 @@
 
-cargo install fnm
+$CARGO install fnm

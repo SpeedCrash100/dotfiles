@@ -1,0 +1,2 @@
+
+$CARGO  install fd-find
