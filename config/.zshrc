@@ -145,3 +145,11 @@ if [ "$?" = "0" ]; then
 fi
 {{/if}}
 
+
+{{#if dotter.packages.fnm}}
+which fnm >/dev/null
+if [ "$?" = "0" ]; then
+    eval "$(fnm env --use-on-cd --shell zsh)"
+fi
+{{/if}}
+
